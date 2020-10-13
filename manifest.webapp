@@ -1,0 +1,43 @@
+{
+  "version": "0.0.2",
+  "name": "GAB Launcher",
+  "description": "Launch Gerda Application Bundles from SD card",
+  "role": "system",
+  "launch_path": "/index.html",
+  "icons": {
+    "56": "/img/icon_56.png",
+    "112": "/img/icon_112.png"
+  },
+  "developer": {
+    "name": "Luxferre",
+    "url": "http://831337.xyz"
+  },
+  "type": "certified",
+  "origin": "app://gab.gerda.tech",
+  "permissions": {
+    "device-storage:sdcard" : {
+      "description": "Required for accessing app packages",
+      "access": "readonly"
+    },
+    "device-storage:sdcard1" : {
+      "description": "Required for accessing app packages",
+      "access": "readonly"
+    },
+    "kaiosextension": {},
+    "engmode-extension": {},
+    "systemXHR": {}
+  },
+  "locales": {},
+  "default_locale": "en",
+  "cursor": true,
+  "activities": {
+    "open": {
+      "href": "./index.html",
+      "disposition": "inline",
+      "filters": {
+        "type": ["application/x-gerda-bundle"]
+      },
+      "returnValue": true
+    }
+  }
+}
